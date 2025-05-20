@@ -29,3 +29,4 @@ vim.o.updatetime = 50
 
 vim.o.colorcolumn = "80"
 vim.o.background = "light"
+vim.diagnostic.config({virtual_text=true})
