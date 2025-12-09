@@ -27,6 +27,21 @@ vim.o.signcolumn = "yes"
 
 vim.o.updatetime = 50
 
-vim.o.colorcolumn = "80"
-vim.o.background = "light"
-vim.diagnostic.config({virtual_text=true})
+vim.o.colorcolumn = "100"
+vim.o.background = "dark"
+vim.o.foldmethod = 'marker'
+-- vim.diagnostic.config({virtual_text=true})
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.g.clipboard = {
+    name = 'WslClipboard',
+    copy = {
+        ["+"] = 'clip.exe',
+        ["*"] = 'clip.exe',
+    },
+    paste = {
+        ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    },
+    cache_enabled = 0,
+}
+vim.keymap.set("n", "<leader>Y", [["+Y]])
