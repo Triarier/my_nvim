@@ -52,18 +52,18 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-vim.lsp.config('pylsp', {
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = {
-          ignore = {'W391','W503','W504'},
-          maxLineLength = 100
-        }
-      }
-    }
-  }
-})
+-- vim.lsp.config('pylsp', {
+--   settings = {
+--     pylsp = {
+--       plugins = {
+--         pycodestyle = {
+--           ignore = {'W391','W503','W504'},
+--           maxLineLength = 100
+--         }
+--       }
+--     }
+--   }
+-- })
 
 -- vim.lsp.inlay_hint.enable(true)
 
