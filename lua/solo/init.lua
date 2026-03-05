@@ -61,8 +61,7 @@ require("copilot").setup({
   panel = { enabled = true },
   --copilot_model = 'bla',
 })
-require'nvim-treesitter'.install { 'python','cpp' }
-
+require'nvim-treesitter'.install { 'python','cpp' ,'lua','javascript','html','css','json','yaml','markdown','ruby' }
 --   panel = {
 --     enabled = true,
 --     auto_refresh = true,
