@@ -4,7 +4,6 @@ return {
     dependencies = {
         {
           'rafamadriz/friendly-snippets',
-          "giuxtaposition/blink-cmp-copilot",
         },
       },
 
@@ -44,15 +43,7 @@ return {
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
-         default = { 'lsp', 'path', 'snippets', 'buffer',"copilot" },
-        providers = {
-            copilot = {
-              name = "copilot",
-              module = "blink-cmp-copilot",
-              score_offset = 100,
-              async = true,
-            },
-        },
+         default = { 'lsp', 'path', 'snippets', 'buffer'},
       },
       signature = { enabled = true },
 
@@ -65,8 +56,4 @@ return {
     },
     opts_extend = { "sources.default" }
   },
-  {
-    "giuxtaposition/blink-cmp-copilot",
-  }
-
 }
