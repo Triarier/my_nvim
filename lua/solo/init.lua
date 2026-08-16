@@ -56,6 +56,14 @@ vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
     { desc = "Open harpoon window" })
 vim.keymap.set('n', '<C-h>', '<Cmd>Neotree toggle<CR>')
 
+-- add for c++ exams hr and cppr as cpp filetype
+vim.filetype.add({
+  extension = {
+    hr = "cpp",
+    cppr = "cpp",
+  },
+})
+
 require("copilot").setup({
   suggestion = { enabled = false },
   panel = { enabled = true },
